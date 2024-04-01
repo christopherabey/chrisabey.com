@@ -48,7 +48,7 @@ export default function Generic({ shapeType }: GenericProps) {
     };
 
     new p5(sketch);
-  }, []);
+  }, [shapeType]);
 
   return <div ref={canvasRef}></div>;
 }
