@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "Chris's Portfolio",
+  title: "Chris Abey",
   description: 'Personal portfolio and projects by Chris',
 }
 
@@ -15,7 +15,6 @@ export default function Home() {
           height="315" 
           src="https://www.youtube.com/embed/qGRQFSKhwzI?si=cq3mZ1HFEBZ-RAyq" 
           title="YouTube video player" 
-          frameBorder="0" 
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
           referrerPolicy="strict-origin-when-cross-origin" 
           allowFullScreen
