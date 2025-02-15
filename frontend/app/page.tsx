@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: "Chris Abey",
-  description: 'Personal portfolio and projects by Chris',
+  description: "Personal portfolio and projects by Chris",
 }
 
 export default function Home() {

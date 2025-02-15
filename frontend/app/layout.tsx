@@ -17,10 +17,10 @@ export const metadata: Metadata = {
     template: '%s | Chris Abey',
     default: 'Chris Abey'
   },
-  description: 'Personal portfolio and projects by Chris',
+  description: "Personal portfolio and projects by Chris",
   icons: {
-    icon: '/public/favicon.ico',
-    apple: '/public/apple-touch-icon.png',
+    icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
   }
 };
 
