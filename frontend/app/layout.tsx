@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Radley, Montserrat } from "next/font/google";
 import "./globals.css";
+import { PostHogProvider } from "./providers";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+export const radley = Radley({
   subsets: ["latin"],
+  weight: "400",
+  variable: '--font-radley',
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+export const montserrat = Montserrat({
   subsets: ["latin"],
+  variable: '--font-montserrat',
 });
 
 export const metadata: Metadata = {
@@ -30,11 +32,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="en" className={`${montserrat.variable} ${radley.variable}`}>
+      <body className="font-radley antialiased">
+        <PostHogProvider>
         {children}
+        </PostHogProvider>
       </body>
     </html>
   );
