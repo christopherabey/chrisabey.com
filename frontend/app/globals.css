@@ -35,11 +35,11 @@ html {
   }
   
   .text-primary {
-    color: #a8bdb1;  /* Lighter version of primary */
+    color: #d4dcd7;  /* More pastel, lighter shade */
   }
 
   .text-secondary {
-    color: #d8a2ad;  /* Lighter version of secondary */
+    color: #d8a2ad;
   }
 
   .bg-background {
@@ -47,10 +47,10 @@ html {
   }
 
   .bg-primary {
-    background-color: #1f2d26;  /* Darker version of primary */
+    background-color: #242424;  /* More neutral dark background */
   }
 
   .bg-secondary {
-    background-color: #3d2126;  /* Darker version of secondary */
+    background-color: #3d2126;
   }
 }
