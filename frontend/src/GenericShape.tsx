@@ -9,6 +9,11 @@ export default function Generic({ shapeType }: GenericProps) {
   const canvasRef = useRef(null);
 
   useEffect(() => {
+    // Generate random rotation speeds between 0.005 and 0.015
+    const rotationX = Math.random() * 0.01 + 0.005;
+    const rotationY = Math.random() * 0.01 + 0.005;
+    const rotationZ = Math.random() * 0.01 + 0.005;
+
     const sketch = (p) => {
       p.setup = () => {
         p.createCanvas(200, 200, p.WEBGL).parent(canvasRef.current);
@@ -18,9 +23,9 @@ export default function Generic({ shapeType }: GenericProps) {
         p.push();
         p.background("#282c34");
         p.normalMaterial();
-        p.rotateZ(p.frameCount * 0.01);
-        p.rotateY(p.frameCount * 0.01);
-        p.rotateX(p.frameCount * 0.01);
+        p.rotateZ(p.frameCount * rotationZ);
+        p.rotateY(p.frameCount * rotationY);
+        p.rotateX(p.frameCount * rotationX);
         switch (shapeType) {
           case "ellipsoid":
             p.ellipsoid(30, 40, 40);
