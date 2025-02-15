@@ -3,6 +3,7 @@ import Navigation from './components/Navigation'
 import SocialLinks from './components/SocialLinks'
 import VideoProject from './components/VideoProject'
 import TrackedLink from './components/TrackedLink'
+import ScrollArrow from './components/ScrollArrow'
 
 export default function Home() {
   return (
@@ -23,6 +24,9 @@ export default function Home() {
             <p className="text-secondary font-montserrat text-xl md:text-2xl font-medium text-center"> 
               Software Engineer and Creator 
             </p>
+          </div>
+          <div className="absolute bottom-10">
+            <ScrollArrow />
           </div>
         </section>
 
