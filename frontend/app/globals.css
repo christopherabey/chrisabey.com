@@ -9,8 +9,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #171717;
+    --foreground: #f4f1e9;
   }
 }
 
@@ -26,4 +26,31 @@ p {
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Add dark mode text colors */
+@media (prefers-color-scheme: dark) {
+  .text-black {
+    color: #f4f1e9;
+  }
+  
+  .text-primary {
+    color: #a8bdb1;  /* Lighter version of primary */
+  }
+
+  .text-secondary {
+    color: #d8a2ad;  /* Lighter version of secondary */
+  }
+
+  .bg-background {
+    background-color: #171717;
+  }
+
+  .bg-primary {
+    background-color: #1f2d26;  /* Darker version of primary */
+  }
+
+  .bg-secondary {
+    background-color: #3d2126;  /* Darker version of secondary */
+  }
 }
