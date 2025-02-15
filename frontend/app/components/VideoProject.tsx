@@ -3,7 +3,6 @@
 import posthog from "posthog-js"
 
 interface VideoProjectProps {
-  title: string
   description: string | React.ReactNode
   videoId?: string  // Made optional
   videoUrl?: string // Added for direct video files
@@ -11,7 +10,7 @@ interface VideoProjectProps {
   isReversed?: boolean
 }
 
-export default function VideoProject({ title, description, videoId, videoUrl, videoKey, isReversed = false }: VideoProjectProps) {
+export default function VideoProject({ description, videoId, videoUrl, videoKey, isReversed = false }: VideoProjectProps) {
   const handleClick = () => {
     posthog.capture('user-clicked-video', { 
       video: videoKey
@@ -50,16 +49,16 @@ export default function VideoProject({ title, description, videoId, videoUrl, vi
   }
 
   const content = [
-    <div key="text" className="flex-1">
-      <p className="text-primary font-montserrat text-2xl font-medium">{description}</p>
+    <div key="text" className="flex-1 text-center md:text-left">
+      <p className="text-primary font-montserrat text-xl md:text-2xl font-medium">{description}</p>
     </div>,
-    <div key="video" className="flex-1">
+    <div key="video" className="flex-1 w-full">
       <VideoContent />
     </div>
   ];
 
   return (
-    <div className="flex flex-row items-center justify-between space-x-12">
+    <div className="flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0 md:space-x-12">
       {isReversed ? content.reverse() : content}
     </div>
   );

@@ -3,13 +3,13 @@ import { Radley, Montserrat } from "next/font/google";
 import "./globals.css";
 import { PostHogProvider } from "./providers";
 
-export const radley = Radley({
+const radley = Radley({
   subsets: ["latin"],
   weight: "400",
   variable: '--font-radley',
 });
 
-export const montserrat = Montserrat({
+const montserrat = Montserrat({
   subsets: ["latin"],
   variable: '--font-montserrat',
 });
